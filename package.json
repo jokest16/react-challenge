@@ -8,6 +8,12 @@
     "body-parser": "1.18.2",
     "dreamjs": "^0.1.8",
     "express": "4.16.2",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^5.0.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^4.0.1",
+    "gulp-svgmin": "^1.2.4",
+    "gulp-svgstore": "^6.1.1",
     "react": "16.1.1",
     "react-dom": "16.1.1",
     "react-scripts": "1.0.17"

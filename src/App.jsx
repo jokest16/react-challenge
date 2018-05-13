@@ -31,7 +31,7 @@ class App extends React.Component {
         console.log(this.state);
         return (
             <main>
-                <SvgSpite/>
+                {this.props.children}
                 <Header/>
                 <section className="todo-list">
                     {/*{this.state.todos.map(todo =>
