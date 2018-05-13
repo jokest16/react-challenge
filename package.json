@@ -1,0 +1,23 @@
+{
+  "name": "react-basics",
+  "version": "1.0.0",
+  "private": true,
+  "proxy": "http://localhost:5000",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "body-parser": "1.18.2",
+    "dreamjs": "^0.1.8",
+    "express": "4.16.2",
+    "react": "16.1.1",
+    "react-dom": "16.1.1",
+    "react-scripts": "1.0.17"
+  },
+  "scripts": {
+    "server": "node ./api/index.js",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "generate-data": "node api/generate-data.js"
+  }
+}
