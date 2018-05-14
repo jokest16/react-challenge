@@ -1,7 +1,6 @@
 import React from 'react';
 import axios from 'axios';
 
-import SvgSpite from './SvgSprite';
 import Header from './components/Header';
 
 

@@ -3,7 +3,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 
-const todos = require('./todos');
+//const todos = require('./todos');
 const data = require('./data');
 
 let nextId = 4;
@@ -17,12 +17,12 @@ app.use((req, res, next) => {
     next();
 });
 
-app.get('/api/todos', (req, res) => {
-    res.send(todos);
-});
-
 app.get('/api/data', (req, res) => {
     res.send(data);
+});
+
+/*app.get('/api/todos', (req, res) => {
+    res.send(todos);
 });
 
 app.post('/api/todos', (req, res) => {
@@ -65,6 +65,6 @@ app.delete('/api/todos/:id', (req, res) => {
     todos.splice(index, 1);
 
     res.sendStatus(204);
-});
+});*/
 
 app.listen(5000, 'localhost');
