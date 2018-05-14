@@ -2,7 +2,7 @@ import React from 'react';
 import axios from 'axios';
 
 import Header from './components/Header';
-
+import ProfileThumbnailTable from './components/ProfileThumbnailTable';
 
 class App extends React.Component {
     constructor(props) {
@@ -16,6 +16,8 @@ class App extends React.Component {
         this.handleDelete = this.handleDelete.bind(this);
         this.handleToggle = this.handleToggle.bind(this);
         this.handleEdit = this.handleEdit.bind(this);*/
+
+        this.handleProfileChoice = this.handleProfileChoice.bind(this);
     }
 
     componentDidMount() {
@@ -26,12 +28,17 @@ class App extends React.Component {
 
     }
 
+    handleProfileChoice (id,name) {
+        console.log(id,name);
+    }
+
     render() {
         console.log(this.state);
         return (
             <main>
                 {this.props.children}
                 <Header/>
+                <ProfileThumbnailTable data={this.state.data} onChoice={this.handleProfileChoice}/>
                 <section className="todo-list">
                     {/*{this.state.todos.map(todo =>
                         <Todo

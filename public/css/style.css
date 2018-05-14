@@ -1,26 +1,74 @@
-.rc-intro {
+.header-block .rc-intro {
   background-color: #222;
   padding: 2rem;
   text-align: center;
   margin-bottom: 3rem; }
 
-.rc-img {
+.header-block .rc-img {
   max-width: 50px; }
 
-.rc-title {
+.header-block .rc-title {
   font-size: 5rem;
   margin-top: 3rem;
   color: #fff;
-  font-family: 'Open Sans';
+  font-family: "Open Sans", "Helvetica Neue", Verdana, Arial, sans-serif, Georgia, Times, "Times New Roman", serif;
   font-weight: 700;
   letter-spacing: -2px; }
 
-.rc-description {
+.header-block .rc-description {
   margin-top: 2rem;
   font-size: 2rem;
   color: #ccc; }
+
+.profile-table > .titles {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: space-around;
+      -ms-flex-pack: distribute;
+          justify-content: space-around; }
+
+.profile-table .profile-card:nth-child(odd) {
+  background-color: #ddd; }
+
+.profile-card .inform-list {
+  text-align: center; }
+
+.profile-card .inform-list > .item {
+  margin-top: 5px;
+  margin-right: 5px;
+  margin-bottom: 10px;
+  padding: 10px; }
+
+.profile-card .inform-list > .item.-inline {
+  display: inline-block; }
+
+.profile-card.-row .inform-list {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-justify-content: space-around;
+      -ms-flex-pack: distribute;
+          justify-content: space-around; }
+
+.profile-card.-row .inform-list > .item.-icon {
+  margin-top: 10px; }
 
 .svg-sprite {
   width: 0;
   height: 0;
   display: none; }
+
+ul {
+  list-style: none; }

@@ -4,7 +4,7 @@ import Icon from './Icon';
 
 function Header(props) {
     return (
-        <header>
+        <header className="header-block">
             <div className="container-fluid rc-intro">
                 <div className="container">
                     <Icon name={'react'}/>

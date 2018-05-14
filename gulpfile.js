@@ -14,11 +14,6 @@ gulp.task('scss',function () {
         .pipe(gulp.dest('public/css/'));
 });
 
-gulp.task('watch',['svg','scss'],function () {
-    gulp.watch('./scss/**/*.+(scss)',['scss']);
-    gulp.watch('./images/**/*.+(scss)',['svg']);
-});
-
 gulp.task('svgCompileSprite',function() {
     return gulp.src('./images/svg_icon/*.svg')
         .pipe(svgMin(function (file) {
@@ -56,14 +51,18 @@ gulp.task('fsWriteSprite',() => {
                         ['stroke-width','strokeWidth'],
                         ['clip-path','clipPath']
                     ];
+
     regExpArray.forEach(item => {
        let reg = new RegExp(item[0],'igm');
        svgSprite = svgSprite.replace(reg,item[1]);
     });
 
-
     fs.writeFileSync('./src/SvgSprite.jsx',svgSpriteCompanent.replace(/<svg.+/igm, svgSprite));
+});
 
+gulp.task('watch',['svg','scss'],function () {
+    gulp.watch('./scss/**/*.scss',['scss']);
+    gulp.watch('./images/**/*.+(svg)',['svg']);
 });
 
 gulp.task('default',['watch']);

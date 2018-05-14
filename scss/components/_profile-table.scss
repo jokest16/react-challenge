@@ -1,0 +1,12 @@
+$profile-table--profile-card_odd--background-color: $color-2-1;
+
+.profile-table {
+    > .titles {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .profile-card:nth-child(odd) {
+        background-color: $profile-table--profile-card_odd--background-color;
+    }
+}
